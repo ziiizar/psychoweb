@@ -4,13 +4,22 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Calendar, Clock, User, CreditCard, CheckCircle } from 'lucide-react';
+import { useRouter } from 'next/navigation';
 
 export default function AgendarPage() {
+  const router = useRouter();
   const [step, setStep] = useState(1);
   const [selectedService, setSelectedService] = useState('');
   const [selectedDate, setSelectedDate] = useState('');
   const [selectedTime, setSelectedTime] = useState('');
   const [selectedPayment, setSelectedPayment] = useState('');
+  const [formData, setFormData] = useState({
+    name: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    reason: ''
+  });
 
   const services = [
     { id: 'individual', name: 'Terapia Individual', duration: '50 min', price: 60 },
@@ -32,8 +41,8 @@ export default function AgendarPage() {
   ];
 
   const paymentMethods = [
-    { id: 'card', name: 'Tarjeta de Crédito/Débito', description: 'Pago seguro online' },
-    { id: 'transfer', name: 'Transferencia Bancaria', description: 'Recibirás los datos por email' }
+    { id: 'card', name: 'Tarjeta de Crédito/Débito', description: 'Pago seguro online con Stripe' },
+    { id: 'transfer', name: 'Transferencia Bancaria', description: 'Pago mediante transferencia SEPA' }
   ];
 
   const nextStep = () => {
@@ -45,6 +54,29 @@ export default function AgendarPage() {
   };
 
   const getSelectedService = () => services.find(s => s.id === selectedService);
+
+  const handleFormChange = (field: string, value: string) => {
+    setFormData(prev => ({ ...prev, [field]: value }));
+  };
+
+  const handleConfirmAndPay = () => {
+    const selectedServiceData = getSelectedService();
+    if (!selectedServiceData) return;
+
+    // Crear URL con parámetros para la página de pago
+    const paymentParams = new URLSearchParams({
+      service: selectedServiceData.name,
+      amount: selectedServiceData.price.toString(),
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      date: selectedDate,
+      time: selectedTime,
+      paymentMethod: selectedPayment
+    });
+
+    router.push(`/pago?${paymentParams.toString()}`);
+  };
 
   return (
     <div className="min-h-screen bg-slate-50 py-12">
@@ -179,6 +211,8 @@ export default function AgendarPage() {
                     </label>
                     <input
                       type="text"
+                      value={formData.name}
+                      onChange={(e) => handleFormChange('name', e.target.value)}
                       className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       placeholder="Tu nombre"
                     />
@@ -189,6 +223,8 @@ export default function AgendarPage() {
                     </label>
                     <input
                       type="text"
+                      value={formData.lastName}
+                      onChange={(e) => handleFormChange('lastName', e.target.value)}
                       className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       placeholder="Tus apellidos"
                     />
@@ -201,6 +237,8 @@ export default function AgendarPage() {
                   </label>
                   <input
                     type="email"
+                    value={formData.email}
+                    onChange={(e) => handleFormChange('email', e.target.value)}
                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="tu@email.com"
                   />
@@ -212,6 +250,8 @@ export default function AgendarPage() {
                   </label>
                   <input
                     type="tel"
+                    value={formData.phone}
+                    onChange={(e) => handleFormChange('phone', e.target.value)}
                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="+34 600 123 456"
                   />
@@ -223,6 +263,8 @@ export default function AgendarPage() {
                   </label>
                   <textarea
                     rows={4}
+                    value={formData.reason}
+                    onChange={(e) => handleFormChange('reason', e.target.value)}
                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Cuéntame brevemente el motivo de tu consulta..."
                   />
@@ -301,15 +343,16 @@ export default function AgendarPage() {
                 Anterior
               </Button>
               <Button
-                onClick={step === 4 ? () => alert('¡Cita agendada con éxito!') : nextStep}
+                onClick={step === 4 ? handleConfirmAndPay : nextStep}
                 disabled={
                   (step === 1 && !selectedService) ||
                   (step === 2 && (!selectedDate || !selectedTime)) ||
+                  (step === 3 && (!formData.name || !formData.email || !formData.phone)) ||
                   (step === 4 && !selectedPayment)
                 }
                 className="px-8 bg-blue-600 hover:bg-blue-700"
               >
-                {step === 4 ? 'Confirmar y Pagar' : 'Siguiente'}
+                {step === 4 ? 'Proceder al Pago' : 'Siguiente'}
               </Button>
             </div>
           </CardContent>
