@@ -4,23 +4,23 @@ export function About() {
   const features = [
     {
       icon: Brain,
-      title: 'Enfoque Científico',
-      description: 'Utilizo técnicas basadas en evidencia científica para garantizar los mejores resultados en tu proceso terapéutico.'
+      title: 'Terapia Cognitivo-Conductual',
+      description: 'Especializada en TCC, la terapia más efectiva basada en evidencia científica para tratar ansiedad, depresión y otros trastornos.'
     },
     {
       icon: Heart,
       title: 'Atención Personalizada',
-      description: 'Cada persona es única. Adapto mi metodología a tus necesidades específicas y objetivos personales.'
+      description: 'Cada persona es única. Adapto mi metodología a tus necesidades específicas y objetivos personales en un ambiente de confianza.'
     },
     {
       icon: Users,
-      title: 'Experiencia Comprobada',
-      description: 'Más de 10 años ayudando a personas a superar sus desafíos y alcanzar su bienestar mental.'
+      title: '15 Años de Experiencia',
+      description: 'Más de 15 años ayudando a personas en Murcia a superar sus desafíos emocionales y alcanzar su bienestar mental.'
     },
     {
       icon: Clock,
-      title: 'Flexibilidad Horaria',
-      description: 'Horarios adaptados a tu rutina, incluyendo sesiones online para mayor comodidad.'
+      title: 'Flexibilidad Total',
+      description: 'Consulta presencial en Murcia y sesiones online. Horarios adaptados a tu rutina para mayor comodidad.'
     }
   ];
 
@@ -29,11 +29,11 @@ export function About() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-            ¿Por qué elegir nuestros servicios?
+            ¿Por qué elegir mi consulta psicológica?
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Mi compromiso es brindarte el mejor acompañamiento psicológico con un enfoque profesional, 
-            humano y adaptado a tus necesidades.
+            humano y adaptado a tus necesidades específicas.
           </p>
         </div>
 
@@ -59,18 +59,23 @@ export function About() {
                 Sobre mi experiencia profesional
               </h3>
               <p className="text-gray-700 mb-6 leading-relaxed">
-                Soy psicólogo colegiado con más de 10 años de experiencia en el campo de la salud mental. 
-                Me especializo en terapia cognitivo-conductual, terapia de pareja y tratamiento de ansiedad y depresión.
+                Soy Alierty, psicóloga colegiada con más de 15 años de experiencia en el campo de la salud mental. 
+                Me especializo en terapia cognitivo-conductual, tratamiento de ansiedad, depresión y trastornos del estado de ánimo.
+              </p>
+              <p className="text-gray-700 mb-6 leading-relaxed">
+                Mi consulta está ubicada en Murcia, donde atiendo tanto de forma presencial como online. 
+                Mi objetivo es crear un espacio seguro y de confianza donde puedas explorar tus emociones y 
+                desarrollar herramientas efectivas para mejorar tu bienestar.
               </p>
               <p className="text-gray-700 leading-relaxed">
-                Mi objetivo es crear un espacio seguro donde puedas explorar tus emociones, desarrollar herramientas 
-                para afrontar desafíos y alcanzar un mayor bienestar en tu vida personal y profesional.
+                Utilizo técnicas basadas en evidencia científica, adaptadas a cada persona, para ayudarte a 
+                superar los desafíos emocionales y alcanzar una vida más plena y satisfactoria.
               </p>
             </div>
             <div className="relative">
               <img
-                src="https://images.pexels.com/photos/5728849/pexels-photo-5728849.jpeg?auto=compress&cs=tinysrgb&w=600"
-                alt="Psicólogo profesional"
+                src="/788a6a9a822b0bee39e8f9cd3ce83ede_large.jpg"
+                alt="Alierty Psicóloga - Profesional especializada en Murcia"
                 className="w-full h-80 object-cover rounded-2xl shadow-lg"
               />
             </div>

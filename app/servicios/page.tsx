@@ -6,94 +6,94 @@ import Link from 'next/link';
 export default function ServiciosPage() {
   const services = [
     {
+      icon: Brain,
+      title: 'Terapia Cognitivo-Conductual',
+      description: 'Mi especialidad principal. Tratamiento basado en evidencia científica para modificar patrones de pensamiento y comportamiento.',
+      duration: '50 minutos',
+      price: 'Desde 60€',
+      benefits: [
+        'Identificación de pensamientos automáticos negativos',
+        'Reestructuración cognitiva efectiva',
+        'Técnicas de relajación y mindfulness',
+        'Exposición gradual para fobias',
+        'Prevención de recaídas a largo plazo'
+      ],
+      conditions: ['Ansiedad generalizada', 'Ataques de pánico', 'Depresión', 'TOC', 'Fobias específicas', 'Estrés postraumático']
+    },
+    {
       icon: User,
       title: 'Terapia Individual',
-      description: 'Sesiones personalizadas para abordar tus necesidades específicas',
+      description: 'Sesiones personalizadas adaptadas a tus necesidades específicas y objetivos de bienestar mental.',
       duration: '50 minutos',
       price: 'Desde 60€',
       benefits: [
         'Evaluación psicológica completa',
         'Plan de tratamiento personalizado',
-        'Técnicas basadas en evidencia',
+        'Técnicas adaptadas a tu personalidad',
         'Seguimiento continuo del progreso',
-        'Herramientas para el día a día'
+        'Herramientas prácticas para el día a día'
       ],
-      conditions: ['Ansiedad', 'Depresión', 'Estrés', 'Fobias', 'Autoestima', 'Duelo']
+      conditions: ['Baja autoestima', 'Problemas de confianza', 'Gestión del estrés', 'Desarrollo personal', 'Problemas de sueño']
     },
     {
       icon: Users,
       title: 'Terapia de Pareja',
-      description: 'Fortalece tu relación con comunicación efectiva',
+      description: 'Fortalece tu relación con técnicas especializadas en comunicación y resolución de conflictos.',
       duration: '60 minutos',
       price: 'Desde 80€',
       benefits: [
-        'Mejora de la comunicación',
-        'Resolución de conflictos',
-        'Fortalecimiento del vínculo',
-        'Técnicas de intimidad',
-        'Proyecto de vida compartido'
+        'Mejora de la comunicación efectiva',
+        'Resolución constructiva de conflictos',
+        'Fortalecimiento del vínculo emocional',
+        'Técnicas de intimidad y conexión',
+        'Construcción de proyecto de vida compartido'
       ],
-      conditions: ['Crisis de pareja', 'Problemas de comunicación', 'Infidelidad', 'Separación', 'Convivencia']
-    },
-    {
-      icon: Brain,
-      title: 'Terapia Cognitivo-Conductual',
-      description: 'Modifica patrones de pensamiento y comportamiento',
-      duration: '50 minutos',
-      price: 'Desde 65€',
-      benefits: [
-        'Identificación de pensamientos automáticos',
-        'Reestructuración cognitiva',
-        'Técnicas de relajación',
-        'Exposición gradual',
-        'Prevención de recaídas'
-      ],
-      conditions: ['TOC', 'Pánico', 'Ansiedad social', 'Adicciones', 'Trastornos del ánimo']
+      conditions: ['Crisis de pareja', 'Problemas de comunicación', 'Infidelidad', 'Dificultades de convivencia', 'Separación']
     },
     {
       icon: Heart,
       title: 'Apoyo Emocional',
-      description: 'Acompañamiento en momentos difíciles de tu vida',
+      description: 'Acompañamiento especializado en momentos difíciles con estrategias de afrontamiento efectivas.',
       duration: '50 minutos',
       price: 'Desde 55€',
       benefits: [
-        'Contención emocional',
-        'Estrategias de afrontamiento',
-        'Desarrollo de resiliencia',
-        'Apoyo en crisis',
-        'Orientación en decisiones'
+        'Contención emocional profesional',
+        'Estrategias de afrontamiento personalizadas',
+        'Desarrollo de resiliencia emocional',
+        'Apoyo en crisis vitales',
+        'Orientación en toma de decisiones importantes'
       ],
-      conditions: ['Duelo', 'Trauma', 'Crisis vitales', 'Enfermedades', 'Cambios importantes']
+      conditions: ['Duelo y pérdidas', 'Trauma emocional', 'Crisis vitales', 'Enfermedades', 'Cambios importantes']
     },
     {
       icon: Baby,
-      title: 'Psicología Infantil',
-      description: 'Apoyo especializado para niños y adolescentes',
+      title: 'Psicología Infantil y Adolescente',
+      description: 'Apoyo especializado para niños y adolescentes con técnicas adaptadas a cada edad.',
       duration: '45 minutos',
       price: 'Desde 55€',
       benefits: [
-        'Evaluación del desarrollo',
-        'Terapia lúdica',
-        'Orientación a padres',
-        'Técnicas adaptadas a la edad',
-        'Seguimiento escolar'
+        'Evaluación del desarrollo emocional',
+        'Terapia lúdica especializada',
+        'Orientación y apoyo a padres',
+        'Técnicas adaptadas a cada edad',
+        'Coordinación con centros educativos'
       ],
-      conditions: ['TDAH', 'Ansiedad infantil', 'Problemas escolares', 'Conducta', 'Desarrollo']
+      conditions: ['TDAH', 'Ansiedad infantil', 'Problemas escolares', 'Trastornos de conducta', 'Dificultades de desarrollo']
     },
     {
       icon: Building,
       title: 'Psicología Laboral',
-      description: 'Bienestar mental en el ámbito profesional',
+      description: 'Bienestar mental en el ámbito profesional y desarrollo de habilidades laborales.',
       duration: '50 minutos',
       price: 'Desde 70€',
       benefits: [
-        'Gestión del estrés laboral',
-        'Burnout y prevención',
-        'Desarrollo de habilidades',
-        'Liderazgo y comunicación',
-        'Conciliación vida-trabajo'
+        'Gestión efectiva del estrés laboral',
+        'Prevención y tratamiento del burnout',
+        'Desarrollo de habilidades profesionales',
+        'Mejora del liderazgo y comunicación',
+        'Estrategias de conciliación vida-trabajo'
       ],
-      conditions: ['Burnout', 'Estrés laboral', 'Mobbing', 'Cambio de carrera', 'Liderazgo']
+      conditions: ['Burnout', 'Estrés laboral', 'Mobbing', 'Cambio de carrera', 'Problemas de liderazgo']
     }
   ];
 
@@ -104,18 +104,16 @@ export default function ServiciosPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl lg:text-5xl font-bold mb-6">
-              Servicios Psicológicos Profesionales
+              Servicios Psicológicos Especializados
             </h1>
             <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-8">
               Ofrezco una amplia gama de servicios especializados para abordar diferentes necesidades 
-              de salud mental con un enfoque profesional y personalizado.
+              de salud mental con un enfoque profesional, personalizado y basado en evidencia científica.
             </p>
-            <Button asChild size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
-              <Link href="/agendar">
-                <Clock className="w-5 h-5 mr-2" />
-                Agendar Consulta
-              </Link>
-            </Button>
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 inline-block">
+              <p className="text-lg font-semibold mb-2">Consulta presencial en Murcia y online</p>
+              <p className="text-blue-100">Primera consulta gratuita de 20 minutos</p>
+            </div>
           </div>
         </div>
       </section>
@@ -172,12 +170,44 @@ export default function ServiciosPage() {
                     </div>
                     
                     <Button asChild className="w-full bg-blue-600 hover:bg-blue-700">
-                      <Link href="/agendar">Agendar Sesión</Link>
+                      <Link href="/agendar">Reservar Cita</Link>
                     </Button>
                   </div>
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Consultation Image Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                Un espacio seguro para tu bienestar
+              </h2>
+              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+                Mi consulta está diseñada para ofrecerte un ambiente cálido, seguro y confidencial 
+                donde puedas sentirte cómodo/a para explorar tus emociones y trabajar en tu crecimiento personal.
+              </p>
+              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                Tanto si prefieres sesiones presenciales en Murcia como online, mi compromiso es 
+                brindarte la misma calidad de atención profesional y el acompañamiento que necesitas 
+                para alcanzar tus objetivos de bienestar mental.
+              </p>
+              <Button asChild size="lg" className="bg-emerald-600 hover:bg-emerald-700">
+                <Link href="/contacto">Primera Consulta Gratuita</Link>
+              </Button>
+            </div>
+            <div className="relative">
+              <img
+                src="/Tratamientos-psicologicos-en-Murcia-1-1-1024x683.jpg"
+                alt="Consulta psicológica profesional en Murcia"
+                className="w-full h-80 object-cover rounded-2xl shadow-lg"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -190,11 +220,16 @@ export default function ServiciosPage() {
           </h2>
           <p className="text-xl text-gray-600 mb-8">
             Contacta conmigo para una consulta personalizada. Podemos adaptar el tratamiento 
-            a tus necesidades específicas.
+            a tus necesidades específicas y crear un plan terapéutico único para ti.
           </p>
-          <Button asChild size="lg" className="bg-emerald-600 hover:bg-emerald-700">
-            <Link href="/contacto">Consulta Personalizada</Link>
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700">
+              <Link href="/contacto">Consulta Personalizada</Link>
+            </Button>
+            <Button asChild variant="outline" size="lg" className="border-emerald-600 text-emerald-600 hover:bg-emerald-50">
+              <Link href="/agendar">Reservar Primera Cita</Link>
+            </Button>
+          </div>
         </div>
       </section>
     </div>

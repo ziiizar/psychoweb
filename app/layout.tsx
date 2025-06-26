@@ -7,8 +7,8 @@ import { Footer } from '@/components/Footer';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Dr. [Tu Nombre] - Psicólogo Profesional en España',
-  description: 'Servicios de psicología profesional. Agenda tu cita online de forma sencilla y segura.',
+  title: 'Alierty Psicóloga - Especialista en Terapia Cognitivo-Conductual en Murcia',
+  description: 'Psicóloga especializada en TCC con más de 15 años de experiencia. Consulta presencial en Murcia y online. Primera consulta gratuita.',
 };
 
 export default function RootLayout({

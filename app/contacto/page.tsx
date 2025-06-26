@@ -11,8 +11,8 @@ export default function ContactoPage() {
   const handleWhatsAppRedirect = () => {
     setIsRedirecting(true);
     // Número de WhatsApp (reemplaza con tu número real)
-    const phoneNumber = '34600123456'; // Formato: código país + número sin espacios
-    const message = encodeURIComponent('Hola, me gustaría obtener más información sobre los servicios de psicología.');
+    const phoneNumber = '34968123456'; // Formato: código país + número sin espacios
+    const message = encodeURIComponent('Hola Alierty, me gustaría obtener más información sobre los servicios de psicología y agendar una consulta.');
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
     
     setTimeout(() => {
@@ -31,8 +31,12 @@ export default function ContactoPage() {
           </h1>
           <p className="text-xl text-emerald-100 mb-8">
             Ponte en contacto conmigo para resolver cualquier duda o agendar tu consulta. 
-            Te responderé lo antes posible.
+            Te responderé lo antes posible para ayudarte en tu proceso de bienestar.
           </p>
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 inline-block">
+            <p className="text-lg font-semibold mb-2">Primera consulta gratuita de 20 minutos</p>
+            <p className="text-emerald-100">Para conocernos y resolver tus dudas sin compromiso</p>
+          </div>
         </div>
       </section>
 
@@ -46,7 +50,8 @@ export default function ContactoPage() {
                   Información de Contacto
                 </h2>
                 <p className="text-lg text-gray-600 mb-8">
-                  Estoy aquí para ayudarte. Elige la forma de contacto que más te convenga.
+                  Estoy aquí para ayudarte. Elige la forma de contacto que más te convenga 
+                  para comenzar tu proceso de bienestar mental.
                 </p>
               </div>
 
@@ -59,7 +64,7 @@ export default function ContactoPage() {
                       </div>
                       <div>
                         <h3 className="font-semibold text-gray-900">Teléfono</h3>
-                        <p className="text-gray-600">+34 600 123 456</p>
+                        <p className="text-gray-600">+34 968 123 456</p>
                         <p className="text-sm text-gray-500">Lun-Vie: 9:00-20:00</p>
                       </div>
                     </div>
@@ -74,7 +79,7 @@ export default function ContactoPage() {
                       </div>
                       <div>
                         <h3 className="font-semibold text-gray-900">Email</h3>
-                        <p className="text-gray-600">contacto@psicologopro.es</p>
+                        <p className="text-gray-600">contacto@alietypsicologa.es</p>
                         <p className="text-sm text-gray-500">Respuesta en 24h</p>
                       </div>
                     </div>
@@ -88,9 +93,9 @@ export default function ContactoPage() {
                         <MapPin className="w-6 h-6 text-purple-600" />
                       </div>
                       <div>
-                        <h3 className="font-semibold text-gray-900">Ubicación</h3>
-                        <p className="text-gray-600">Calle de la Salud, 123</p>
-                        <p className="text-gray-600">28001 Madrid, España</p>
+                        <h3 className="font-semibold text-gray-900">Consulta Presencial</h3>
+                        <p className="text-gray-600">Centro de Murcia</p>
+                        <p className="text-gray-600">30001 Murcia, España</p>
                       </div>
                     </div>
                   </CardContent>
@@ -103,7 +108,7 @@ export default function ContactoPage() {
                         <Clock className="w-6 h-6 text-orange-600" />
                       </div>
                       <div>
-                        <h3 className="font-semibold text-gray-900">Horarios</h3>
+                        <h3 className="font-semibold text-gray-900">Horarios de Atención</h3>
                         <div className="text-gray-600 space-y-1">
                           <p>Lunes a Viernes: 9:00 - 20:00</p>
                           <p>Sábados: 10:00 - 14:00</p>
@@ -139,14 +144,14 @@ export default function ContactoPage() {
                     
                     <p className="text-gray-600">
                       Te responderé personalmente a través de WhatsApp para resolver tus dudas 
-                      o agendar tu consulta de forma rápida y directa.
+                      sobre los tratamientos o agendar tu consulta de forma rápida y directa.
                     </p>
                     
                     <ul className="text-sm text-gray-600 space-y-2">
                       <li>✓ Respuesta inmediata en horario de atención</li>
-                      <li>✓ Resolución de dudas sobre servicios</li>
+                      <li>✓ Resolución de dudas sobre tratamientos</li>
                       <li>✓ Agendamiento directo de citas</li>
-                      <li>✓ Consulta gratuita de 15 minutos</li>
+                      <li>✓ Primera consulta gratuita de 20 minutos</li>
                     </ul>
                   </div>
                   
@@ -180,7 +185,7 @@ export default function ContactoPage() {
                   <Button asChild className="w-full bg-blue-600 hover:bg-blue-700" size="lg">
                     <a href="/agendar">
                       <Calendar className="w-5 h-5 mr-2" />
-                      Agendar Cita Online
+                      Reservar Cita Online
                     </a>
                   </Button>
                   
@@ -196,6 +201,22 @@ export default function ContactoPage() {
                     </a>
                   </Button>
                 </CardContent>
+              </Card>
+
+              {/* Professional Image */}
+              <Card className="border-0 shadow-lg overflow-hidden">
+                <div className="relative">
+                  <img
+                    src="/psicologos-murcia-1-1024x576.jpg"
+                    alt="Alierty Psicóloga - Consulta profesional en Murcia"
+                    className="w-full h-48 object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                  <div className="absolute bottom-4 left-4 text-white">
+                    <p className="font-semibold">Consulta profesional</p>
+                    <p className="text-sm">Presencial y online</p>
+                  </div>
+                </div>
               </Card>
 
               {/* Emergency Contact */}

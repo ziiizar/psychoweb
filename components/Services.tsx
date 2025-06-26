@@ -6,10 +6,18 @@ import { User, Users, Brain, Heart } from 'lucide-react';
 export function Services() {
   const services = [
     {
+      icon: Brain,
+      title: 'Terapia Cognitivo-Conductual',
+      description: 'Tratamiento especializado para modificar patrones de pensamiento y comportamiento negativos.',
+      features: ['Ansiedad y ataques de pánico', 'Depresión y tristeza', 'Fobias específicas', 'Trastorno obsesivo-compulsivo'],
+      duration: '50 min',
+      price: 'Desde 60€'
+    },
+    {
       icon: User,
       title: 'Terapia Individual',
       description: 'Sesiones personalizadas para trabajar en tus objetivos específicos de bienestar mental.',
-      features: ['Ansiedad y depresión', 'Autoestima', 'Gestión del estrés', 'Desarrollo personal'],
+      features: ['Autoestima y confianza', 'Gestión del estrés', 'Desarrollo personal', 'Problemas de sueño'],
       duration: '50 min',
       price: 'Desde 60€'
     },
@@ -17,23 +25,15 @@ export function Services() {
       icon: Users,
       title: 'Terapia de Pareja',
       description: 'Fortalece tu relación con herramientas de comunicación y resolución de conflictos.',
-      features: ['Comunicación efectiva', 'Resolución de conflictos', 'Intimidad', 'Proyecto de vida'],
+      features: ['Comunicación efectiva', 'Resolución de conflictos', 'Crisis de pareja', 'Intimidad emocional'],
       duration: '60 min',
       price: 'Desde 80€'
     },
     {
-      icon: Brain,
-      title: 'Terapia Cognitiva',
-      description: 'Modifica patrones de pensamiento negativos para mejorar tu estado emocional.',
-      features: ['Pensamientos automáticos', 'Creencias limitantes', 'Técnicas de relajación', 'Mindfulness'],
-      duration: '50 min',
-      price: 'Desde 65€'
-    },
-    {
       icon: Heart,
       title: 'Apoyo Emocional',
-      description: 'Acompañamiento en momentos difíciles con estrategias de afrontamiento efectivas.',
-      features: ['Duelo y pérdidas', 'Crisis vitales', 'Trauma', 'Adaptación al cambio'],
+      description: 'Acompañamiento especializado en momentos difíciles con estrategias de afrontamiento.',
+      features: ['Duelo y pérdidas', 'Crisis vitales', 'Adaptación al cambio', 'Trauma emocional'],
       duration: '50 min',
       price: 'Desde 55€'
     }
@@ -44,10 +44,11 @@ export function Services() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-            Servicios Profesionales
+            Servicios Psicológicos Especializados
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Ofrezco una amplia gama de servicios psicológicos adaptados a tus necesidades específicas.
+            Ofrezco tratamientos psicológicos especializados adaptados a tus necesidades específicas, 
+            tanto en consulta presencial en Murcia como online.
           </p>
         </div>
 
@@ -81,7 +82,7 @@ export function Services() {
                   </div>
                 </div>
                 <Button asChild className="w-full bg-blue-600 hover:bg-blue-700">
-                  <Link href="/agendar">Agendar Sesión</Link>
+                  <Link href="/agendar">Reservar Cita</Link>
                 </Button>
               </CardContent>
             </Card>
